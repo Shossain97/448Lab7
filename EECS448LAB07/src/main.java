@@ -16,25 +16,34 @@ public class main {
 		//File stream
 		try
 		{
+			//command
 			BufferedReader inFile = new BufferedReader(new FileReader(new File(args[0])));
+			BufferedWriter outFile=new BufferedWriter(new FileWriter(new File(args[1])));
+			String n;
+			while ((n=inFile.readLine())!=null && (Integer.parseInt(n) > 0))
+			{
+				Matrix m=new Matrix(Integer.parseInt(n));
+
+				
+				double det = m.determinant();
+		
+				
+				if (det != 0)
+				{
+
+				}
+			}
 		}
 		catch(FileNotFoundException e)
 		{
-			System.out.println("File not found");
+			throw new RuntimeException("Cannot find file");
 		}
 		catch(IOException e)
 		{
-			System.out.println("Cannot read file");
+			throw new RuntimeException("Cannot write to file");
 		}
-		try
-		{
-			BufferedWriter outFile=new BufferedWriter(new FileWriter(new File(args[1])));
-		}
-		catch(IOException e)
-		{
-			System.out.println("Cannot write to file");
-		}
-		
+
+		//commands
 
 	}
 
