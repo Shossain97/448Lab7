@@ -24,9 +24,33 @@ public class Matrix {
 		}
 		else
 		{
-			//Code that rerquires submatrix to be made
+			//Code that requires submatrix to be made
 		}
 		return det;
+	}
+	public Matrix subMatrix(int r, int c)
+	{
+		Matrix sub=new Matrix(n-1);
+		int row=0;
+		for(int i=0; i<n;++i)
+		{
+			if(i==r)
+			{
+				continue;
+			}
+			
+			int col = 0;
+			for (int j = 0; j < n; ++j)
+			{
+				if (j == c) continue;
+				
+				sub.mdata[row][col] = mdata[i][j];
+				++col;
+			}
+			
+			++row;
+		}
+		return sub;
 	}
 	
 
