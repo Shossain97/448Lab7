@@ -1,4 +1,4 @@
-//Code adapted from github.comcseasholtz/eecs448-lab7 for 
+//Code adapted from github.com/cseasholtz/eecs448-lab7 for 
 //the purposes of this assignment
 //Author: Shafeen Hossain
 import java.lang.Math;
@@ -75,6 +75,11 @@ public class Matrix {
 		}
 		
 		return inv;
+	}
+	//A way to populate the matrix
+	public void matrixSet(int i, int j, double val)
+	{
+		mdata[i][j]=val;
 	}
 	
 
