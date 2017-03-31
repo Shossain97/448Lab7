@@ -24,7 +24,7 @@ public class Matrix {
 		}
 		else
 		{
-			//Code that requires submatrix to be made
+			//Code that requires sub matrix to be made
 		}
 		return det;
 	}
