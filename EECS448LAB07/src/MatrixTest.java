@@ -47,13 +47,41 @@ public class MatrixTest {
 		
 		sub.matrixSet(1, 0, 3);
 		sub.matrixSet(1, 1, -1);
+		//Strings should match
 		assertEquals(sub.toString(),m.subMatrix(0,0).toString());
 		
 	}
 
 	@Test
 	public void testInverse() {
-		fail("Not yet implemented");
+		Matrix m=new Matrix(3);
+		m.matrixSet(0,0,7);
+		m.matrixSet(0,1,2);
+		m.matrixSet(0,2,1);
+		
+		m.matrixSet(1,0,0);
+		m.matrixSet(1,1,3);
+		m.matrixSet(1,2,-1);
+		
+		m.matrixSet(2,0,-3);
+		m.matrixSet(2,1,4);
+		m.matrixSet(2,2,-2);
+		
+		Matrix inverse=new Matrix(3);
+		inverse.matrixSet(0,0,-2);
+		inverse.matrixSet(0,1,8);
+		inverse.matrixSet(0,2,-5);
+		
+		inverse.matrixSet(1,0,3);
+		inverse.matrixSet(1,1,-11);
+		inverse.matrixSet(1,2,7);
+		
+		inverse.matrixSet(2,0,9);
+		inverse.matrixSet(2,1,-34);
+		inverse.matrixSet(2,2,21);
+		//Strings should match
+		assertEquals(inverse.toString(),m.inverse().toString());
+		
 	}
 
 
