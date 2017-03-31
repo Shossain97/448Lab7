@@ -90,6 +90,7 @@ public class Matrix {
 			for(int j=0;j<n;j++)
 			{
 				result+=String.valueOf(mdata[i][j]);
+				result+=" ";
 			}
 			result+="\n";
 		}
