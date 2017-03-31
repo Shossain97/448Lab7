@@ -1,3 +1,6 @@
+//Code adapted from github.comcseasholtz/eecs448-lab7 for 
+//the purposes of this assignment
+//Author: Shafeen Hossain
 import java.io.*;
 
 public class main {
