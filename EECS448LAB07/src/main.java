@@ -66,7 +66,6 @@ public class main {
 			throw new RuntimeException("Cannot write to file");
 		}
 
-		//commands
 
 	}
 
