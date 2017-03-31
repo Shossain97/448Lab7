@@ -23,16 +23,39 @@ public class main {
 			while ((n=inFile.readLine())!=null && (Integer.parseInt(n) > 0))
 			{
 				Matrix m=new Matrix(Integer.parseInt(n));
-
+				for(int i=0;i<Integer.parseInt(n);i++)
+				{
+					//read in one row
+					n=inFile.readLine();
+					//split the row individually for each num
+					String rowLine[]=n.split(" ");
+					for(int j=0;j<rowLine.length;j++)
+					{
+						m.matrixSet(i,j,Double.parseDouble(rowLine[j]));
+					}
+				}
+				outFile.write("M= ");
+				outFile.newLine();
+				outFile.write(m.toString());
 				
 				double det = m.determinant();
-		
+				outFile.write("Det(M)=");
+				outFile.write(String.valueOf(det));
+				outFile.newLine();
+				outFile.newLine();
+				//Sample code had two endl's so I'm putting two newlines
 				
 				if (det != 0)
 				{
-
+					Matrix inv=m.inverse();
+					outFile.write(inv.toString());
+					outFile.newLine();
 				}
 			}
+			outFile.write("Done!");
+			outFile.newLine();
+			outFile.close();
+			inFile.close();
 		}
 		catch(FileNotFoundException e)
 		{
