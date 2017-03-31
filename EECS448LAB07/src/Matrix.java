@@ -81,6 +81,20 @@ public class Matrix {
 	{
 		mdata[i][j]=val;
 	}
+	//A way to print matrix;
+	public String toString()
+	{
+		String result="";
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				result+=String.valueOf(mdata[i][j]);
+			}
+			result+="\n";
+		}
+		return result;
+	}
 	
 
 }
