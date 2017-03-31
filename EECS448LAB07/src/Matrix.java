@@ -1,9 +1,10 @@
-
+import java.lang.Math;
 public class Matrix {
 	//Max size of matrix
 	public static final int MaxSize=10;
 	//size of current matrix
 	private int n;
+	//The matrix values
 	private double[][] mdata=new double[MaxSize][MaxSize];
 	public Matrix(int _n)
 	{
@@ -24,10 +25,14 @@ public class Matrix {
 		}
 		else
 		{
-			//Code that requires sub matrix to be made
+			for (int i = 0; i < n; ++i)
+			{
+				det += Math.pow(-1.0, (double)i) * mdata[0][i] * subMatrix(0, i).determinant();
+			}
 		}
 		return det;
 	}
+	//Create a submatrix
 	public Matrix subMatrix(int r, int c)
 	{
 		Matrix sub=new Matrix(n-1);
