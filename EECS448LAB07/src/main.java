@@ -22,8 +22,9 @@ public class main {
 			String n;
 			while ((n=inFile.readLine())!=null && (Integer.parseInt(n) > 0))
 			{
+				int size=Integer.parseInt(n);
 				Matrix m=new Matrix(Integer.parseInt(n));
-				for(int i=0;i<Integer.parseInt(n);i++)
+				for(int i=0;i<size;i++)
 				{
 					//read in one row
 					n=inFile.readLine();
