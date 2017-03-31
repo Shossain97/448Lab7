@@ -57,6 +57,22 @@ public class Matrix {
 		}
 		return sub;
 	}
+	//calculate inverse of matrix
+	public Matrix inverse()
+	{
+		Matrix inv=new Matrix(n);
+		double det = determinant();
+		
+		for (int i = 0; i < n; ++i)
+		{
+			for (int j = 0; j < n; ++j)
+			{
+				inv.mdata[i][j] = Math.pow(-1.0, (double)i + j) * subMatrix(j, i).determinant() / det;
+			}
+		}
+		
+		return inv;
+	}
 	
 
 }
